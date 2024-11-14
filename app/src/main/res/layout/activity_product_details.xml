@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FDFDEC"
+    android:padding="16dp">
+
+    <!-- Product Image -->
+    <ImageView
+        android:id="@+id/productImageView1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo" />
+
+    <!-- Product Title -->
+    <TextView
+        android:id="@+id/productTitleTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product Title"
+        android:textColor="#025B4B"
+        android:textSize="22sp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold" />
+
+    <!-- Product Price -->
+    <TextView
+        android:id="@+id/productPriceTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price: $0.00"
+        android:textColor="#025B4B"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Product Category -->
+    <TextView
+        android:id="@+id/productCategoryTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textColor="#025B4B"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Product Description -->
+    <TextView
+        android:id="@+id/productDescriptionTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product Description"
+        android:textColor="#025B4B"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Buy Product Button -->
+    <Button
+        android:id="@+id/buyProductButton1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buy Product"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#025B4B"
+        android:layout_marginTop="24dp" />
+
+</LinearLayout>

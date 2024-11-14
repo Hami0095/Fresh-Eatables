@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Profile Picture -->
+    <ImageView
+        android:id="@+id/profileImageView1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:src="@drawable/user"
+        android:contentDescription="Profile Image" />
+
+    <!-- Username EditText -->
+    <EditText
+        android:id="@+id/usernameEditText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Email EditText -->
+    <EditText
+        android:id="@+id/emailEditText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Update Button -->
+    <Button
+        android:id="@+id/updateButton1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Profile"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Convert to Vendor Button -->
+    <Button
+        android:id="@+id/convertToVendorButton1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Convert to Vendor"
+        android:layout_marginTop="16dp"/><Button
+    android:id="@+id/uploadProductButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Upload Product"
+    android:layout_marginTop="16dp"
+    android:visibility="gone" />
+
+    <!-- Phone EditText (Visible only if the user is a vendor) -->
+    <EditText
+        android:id="@+id/phoneEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Address EditText (Visible only if the user is a vendor) -->
+    <EditText
+        android:id="@+id/addressEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        android:inputType="text"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>

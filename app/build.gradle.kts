@@ -30,9 +30,18 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
+configurations.all {
+    resolutionStrategy.eachDependency {
+        if (requested.group == "org.jetbrains" && requested.name == "annotations") {
+            useVersion("23.0.0")
+        }
+    }
+}
 
 dependencies {
+    implementation("org.jetbrains:annotations:23.0.0")
 
+    // Your other dependencies
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -40,4 +49,14 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    // Room dependencies
+    val room_version = "2.6.1"
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version") // Use annotationProcessor instead of kapt
+    implementation("androidx.room:room-ktx:$room_version")
+    // Glide
+    implementation("com.github.bumptech.glide:glide:4.15.1") {
+        exclude(group = "com.intellij", module = "annotations") // Exclude old annotations
+    }
 }
